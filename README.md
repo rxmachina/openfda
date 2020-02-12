@@ -8,6 +8,11 @@ Explore and analyze FDA Drug Adverse Event (FAERS) data
 
 [openFDA github repository](https://github.com/FDA/openfda/)
 
+
+![FAERS ascii ERD](faers-ascii-ERD.jpg)
+
+
+
 Component | Details
 ------------ | -------------
 Question | What different adverse events reported in different countries?
