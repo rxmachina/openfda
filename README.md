@@ -10,14 +10,11 @@ Explore and analyze FDA Drug Adverse Event (FAERS) data
 
 ------------------------------------------------------------------------------------------
 
-| Analysis | What different adverse events reported in different countries? |
-
-| Sources (FAERS) | REAC19Q3.txt, DEMO19Q3.txt -> join on PRIMARYID |
-
-| Data	   | for each case, record DEMO.OCCR_COUNTRY, REAC.PT pairs |
-
-| Analysis | frequency of each event-type in each country (profile) |
-|	   | frequency profile comparisons across countries |
-|	   | distance matrices |
-|	   | classification/clustering |
+Analysis | What different adverse events reported in different countries?
+Sources (FAERS) | REAC19Q3.txt, DEMO19Q3.txt -> join on PRIMARYID
+Data	   | for each case, record DEMO.OCCR_COUNTRY, REAC.PT pairs
+Analysis | frequency of each event-type in each country (profile)
+   | frequency profile comparisons across countries
+   | distance matrices
+   | classification/clustering
 
