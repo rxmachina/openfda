@@ -13,11 +13,11 @@ https://github.com/FDA/openfda/
 
 ------------------------------------------------------------------------------------------
 
-1.  Are different adverse events reported in different countries?
+Analysis:  What different adverse events reported in different countries?
 
-Use:  REAC19Q3.txt, DEMO19Q3.txt -> join on PRIMARYID
+Sources (FAERS):  REAC19Q3.txt, DEMO19Q3.txt -> join on PRIMARYID
 
-Data:  foreach case, emit DEMO.OCCR_COUNTRY, REAC.PT
+Data:  for each case, record DEMO.OCCR_COUNTRY, REAC.PT pairs
 
 Analysis:  frequency of each event-type in each country (profile)
 	   frequency profile comparisons across countries
