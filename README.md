@@ -2,25 +2,22 @@
 
 Explore and analyze FDA Drug Adverse Event (FAERS) data
 
-FDA Drug Adverse Event Overview
-https://open.fda.gov/apis/drug/event/
+[FDA Drug Adverse Event Overview](https://open.fda.gov/apis/drug/event/)
 
-FDA Adverse Event Reporting System (FAERS) Quarterly Data Extract Files
-https://fis.fda.gov/extensions/FPD-QDE-FAERS/FPD-QDE-FAERS.html
+[FDA Adverse Event Reporting System (FAERS) Quarterly Data Extract Files](https://fis.fda.gov/extensions/FPD-QDE-FAERS/FPD-QDE-FAERS.html)
 
-openFDA github repository
-https://github.com/FDA/openfda/
+[openFDA github repository](https://github.com/FDA/openfda/)
 
 ------------------------------------------------------------------------------------------
 
-Analysis:  What different adverse events reported in different countries?
+| Analysis | What different adverse events reported in different countries? |
 
-Sources (FAERS):  REAC19Q3.txt, DEMO19Q3.txt -> join on PRIMARYID
+| Sources (FAERS) | REAC19Q3.txt, DEMO19Q3.txt -> join on PRIMARYID |
 
-Data:  for each case, record DEMO.OCCR_COUNTRY, REAC.PT pairs
+| Data	   | for each case, record DEMO.OCCR_COUNTRY, REAC.PT pairs |
 
-Analysis:  frequency of each event-type in each country (profile)
-	   frequency profile comparisons across countries
-	   distance matrices
-	   classification/clustering
+| Analysis | frequency of each event-type in each country (profile) |
+|	   | frequency profile comparisons across countries |
+|	   | distance matrices |
+|	   | classification/clustering |
 
