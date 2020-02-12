@@ -8,8 +8,8 @@ Explore and analyze FDA Drug Adverse Event (FAERS) data
 
 [openFDA github repository](https://github.com/FDA/openfda/)
 
-
-
+Component | Details
+------------ | -------------
 Analysis | What different adverse events reported in different countries?
 Sources (FAERS) | REAC19Q3.txt, DEMO19Q3.txt -> join on PRIMARYID
 Data	   | for each case, record DEMO.OCCR_COUNTRY, REAC.PT pairs
