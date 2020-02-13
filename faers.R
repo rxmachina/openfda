@@ -41,7 +41,7 @@ row.names(ev.counts) <- pt
 #
 # basic approach:  convert to normalized freq. (divide row for each country by total events in each country)
 #
-ev.freq <- sweep(ev.counts, 2, colSums(ev.counts), FUN = '/')
+ev.freq <- sweep(ev.counts, 1, rowSums(ev.counts), FUN = '/')
 
 
 # heatmap
