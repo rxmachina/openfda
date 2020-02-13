@@ -22,6 +22,7 @@ Analyses | frequency of each event-type in each country (profile)
  .  | frequency profile comparisons across countries
  .  | distance matrices
  .  | classification/clustering
+* 2019Q3 data is only an incremental subset (<10%) of the entire FAERS dataset
 
 
 2-Way Heatmap of normalized event frequencies (countries in columns):
