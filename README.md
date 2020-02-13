@@ -32,3 +32,9 @@ Analyses | frequency of each event-type in each country (profile)
 Zoomed-in on left side with distinct sets of events for top reporting countries: 
 
 ![event-country-heatmap](event-country-heatmap-rownorm-zoom.jpg)
+
+Histogram of counts of frequency values of each event in individual countries: 
+
+![event-frequency-histogram](event-freq-hist.jpg)
+
+
