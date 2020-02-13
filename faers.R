@@ -74,4 +74,4 @@ write.table(ev.distinct, file="events-distinct-top.txt", sep="\t");
 
 # NOTE:  better approaches could be to use:
 #
-# bi-clustering, discriminant analysis to identify hallmark drug events for each country
+# k-means, bi-clustering, discriminant analysis, NMF to identify hallmark drug events for each country
