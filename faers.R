@@ -41,7 +41,8 @@ row.names(ev.counts) <- pt
 #
 # basic approach:  convert to normalized freq. (divide row for each country by total events in each country)
 #
-ev.freq <- sweep(ev.counts, 1, rowSums(ev.counts), FUN = '/')
+ev.freq <- sweep(ev.counts, 2, colSums(ev.counts), FUN = '/')
+
 
 # heatmap
 #
@@ -54,4 +55,19 @@ ev.heatmap <- heatmap(as.matrix(ev.freq), col= colorRampPalette(brewer.pal(8, "B
 # transformations (scale, variance)
 # measures (correlation, Jaccard, Bray-Curtis)
 # model-based estimates (Poisson, probability estimates e.g. using philentropy package, https://rdrr.io/cran/philentropy/man/estimate.probability.html)
+
+#--------------------------------------------------------------------------------
+
+# extract "distinct" event terms for top 8 reporting countries (US, CA, JP, DE, FR, GB, IT, BR)
+#
+ev.top <- ev.freq[ev.heatmap$rowInd,ev.heatmap$colInd[1:8]]
+
+# determine frequency cutoff for "distinct" terms
+#
+plot(hist(as.vector(as.matrix(ev.top))), main="Drug Event Frequency Histogram", xlab="Event frequency within a country", ylab="Counts", col="skyblue")
+
+# filter list of events with freq > cutoff
+#
+cutfreq <- 0.9
+ev.distinct <- ev.top[apply(ev.top, 1, function(x){ any(x)>cutfreq; }),]
 
