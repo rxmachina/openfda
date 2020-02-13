@@ -43,6 +43,6 @@ Possible other analyses:
 
 Analysis | Methods
 ------------ | -------------
-Clustering | K-means, Non-negative matrix factorization
+Clustering | K-means, biclustering, non-negative matrix factorization
 
 
