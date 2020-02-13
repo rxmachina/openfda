@@ -69,5 +69,9 @@ plot(hist(as.vector(as.matrix(ev.top))), main="Drug Event Frequency Histogram", 
 # filter list of events with freq > cutoff
 #
 cutfreq <- 0.9
-ev.distinct <- ev.top[apply(ev.top, 1, function(x){ any(x)>cutfreq; }),]
+ev.distinct <- ev.top[apply(ev.top, 1, function(x){ any(x > cutfreq); }),]
 
+
+# NOTE:  better approaches could be to use:
+#
+# bi-clustering, discriminant analysis to identify hallmark drug events for each country
