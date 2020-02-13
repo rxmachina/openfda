@@ -71,6 +71,7 @@ plot(hist(as.vector(as.matrix(ev.top))), main="Drug Event Frequency Histogram", 
 cutfreq <- 0.9
 ev.distinct <- ev.top[apply(ev.top, 1, function(x){ any(x > cutfreq); }),]
 
+write.table(ev.distinct, file="events-distinct-top8.txt", sep="\t");
 
 # NOTE:  better approaches could be to use:
 #
