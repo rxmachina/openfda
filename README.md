@@ -23,3 +23,12 @@ Analyses | frequency of each event-type in each country (profile)
  .  | distance matrices
  .  | classification/clustering
 
+
+2-Way Heatmap of normalized event frequencies (countries in columns):
+
+![event-country-heatmap](event-country-heatmap-rownorm-small.jpg)
+
+
+Zoomed-in on left side with distinct sets of events for top reporting countries: 
+
+![event-country-heatmap](event-country-heatmap-rownorm-zoom.jpg)
