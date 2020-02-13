@@ -39,7 +39,7 @@ Histogram of counts of frequency values of each event in individual countries - 
 
 "Distinct" drug event terms above frequency cutoff here:  ![event-distinct-top](events-distinct-top.txt)
 
-Possible further analyses:
+Possible other analyses:
 
 Analysis | Methods
 ------------ | -------------
