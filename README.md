@@ -34,7 +34,7 @@ Zoomed-in on left side with distinct sets of events for top reporting countries:
 
 ![event-country-heatmap](event-country-heatmap-rownorm-zoom.jpg)
 
-Histogram of counts of frequency values of each event in individual countries - a frequency cutoff of 0.9 seems reasonable.
+Histogram of counts of frequency values of each event in individual countries (excludes zero counts) - a frequency cutoff of 0.9 seems reasonable.
 
 ![event-frequency-histogram](event-freq-hist.jpg)
 
