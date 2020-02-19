@@ -26,7 +26,6 @@
 
 # read in raw data
 #
-setwd("~/Documents/mine/pro/AZ/faers_ascii_2019Q3/ascii/")
 events.country <- read.delim("REAC+DEMO19Q3.tab.min.sorted")
 
 # pivot into count matrix
