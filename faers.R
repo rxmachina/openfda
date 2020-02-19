@@ -26,6 +26,7 @@
 
 # read in raw data
 #
+setwd("~/Documents/mine/pro/AZ/faers_ascii_2019Q3/ascii/")
 events.country <- read.delim("REAC+DEMO19Q3.tab.min.sorted")
 
 # pivot into count matrix
@@ -38,7 +39,7 @@ row.names(ev.counts) <- pt
 
 # for clustering, need to normalize data, since raw counts data are not ideal for standard metrics (distance/dissim/corr)
 #
-# basic approach:  convert to normalized freq. (divide event counts in each country by total events for each event type)
+# basic approach:  convert to normalized freq. (divide row for each country by total events in each country)
 #
 ev.freq <- sweep(ev.counts, 1, rowSums(ev.counts), FUN = '/')
 
@@ -63,15 +64,18 @@ ev.top <- ev.freq[ev.heatmap$rowInd,ev.heatmap$colInd[1:8]]
 
 # determine frequency cutoff for "distinct" terms
 #
-plot(hist(as.vector(as.matrix(ev.top))), main="Drug Event Frequency Histogram", xlab="Event frequency within a country", ylab="Counts", col="skyblue")
+ev.top.vec <- as.vector(as.matrix(ev.top));
+ev.top.hist <- hist(ev.top.vec[ ev.top.vec != 0])  # exclude zero counts
+plot(ev.top.hist, main="Drug Event Frequency Histogram", xlab="Event frequency within a country", ylab="Counts", col="skyblue")
 
 # filter list of events with freq > cutoff
 #
 cutfreq <- 0.9
+lines(c(cutfreq,cutfreq),c(0,10000),col="red",lty=2,lwd=2)  # show cutoff freq (dashed red line)
 ev.distinct <- ev.top[apply(ev.top, 1, function(x){ any(x > cutfreq); }),]
 
-write.table(ev.distinct, file="events-distinct-top.txt", sep="\t");
+write.table(ev.distinct, file="events-distinct-top8.txt", sep="\t");
 
 # NOTE:  better approaches could be to use:
 #
-# k-means, bi-clustering, discriminant analysis, NMF to identify hallmark drug events for each country
+# bi-clustering, discriminant analysis to identify hallmark drug events for each country
