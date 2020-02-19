@@ -38,7 +38,7 @@ row.names(ev.counts) <- pt
 
 # for clustering, need to normalize data, since raw counts data are not ideal for standard metrics (distance/dissim/corr)
 #
-# basic approach:  convert to normalized freq. (divide row for each country by total events in each country)
+# basic approach:  convert to normalized freq. (divide row for each country by total for each event type)
 #
 ev.freq <- sweep(ev.counts, 1, rowSums(ev.counts), FUN = '/')
 
