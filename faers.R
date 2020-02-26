@@ -16,7 +16,7 @@
 #
 #     % /usr/bin/time -l join -t $'\t' -o 2.1,2.25,1.3 REAC19Q3.tab.sorted DEMO19Q3.tab.sorted | gzip -c > REAC+DEMO19Q3.tab.min.sorted.gz &
 #
-#     uses ~4.6s real, 850MB max rss
+#     (on a MacBook with 2.6 GHz Intel Core i7:  4.6s real, 850MB max rss)
 #
 # Analysis:  normalize country counts by total events -> frequency of each event-type in each country (profile)
 #	     heatmap of countries vs events
